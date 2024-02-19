@@ -1,0 +1,15 @@
+.add-carrito-btn{
+    width: 100px;
+    height: auto;
+    border-radius: 16px;
+    background-color: aqua;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+}
+.add-carrito-btn:hover{
+    border: 1px solid red;
+    background-color: aquamarine;
+    color: black;
+}
