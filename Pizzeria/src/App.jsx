@@ -8,6 +8,7 @@ import './App.css'
 import Home from "./views/Home";
 import Carrito from "./views/Carrito";
 import Contacto from "./views/Contacto";
+import Detalle from "./views/Detalle"
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/Home" element={<Home />}/>
+            <Route path="/Detalle/:indice" element={<Detalle />}/>
             <Route path="/Carrito" element={<Carrito />}/>
             <Route path="/Contacto" element={<Contacto />}/>
           </Routes>

@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react"
 import { PizzaContext } from "../context/PizzaContext";
 import { Table } from "react-bootstrap";
 import './Carrito.css';
-import Detalle from "../components/Detalle";
 
 
 

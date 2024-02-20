@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { PizzaContext } from "../context/PizzaContext";
 import './Home.css';
-import Detalle from "../components/Detalle";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -9,6 +9,7 @@ function Home() {
     const {posts, setPosts}=useContext(PizzaContext)
     const {ventas, setVentas}=useContext(PizzaContext)
     const {carrito, setCarrito}=useContext(PizzaContext)
+    const navigate=useNavigate()
 
     function handleAddCarritoOnClick(valor){
         const cartaArray = posts
@@ -23,6 +24,16 @@ function Home() {
         setVentas(cartaArray)
     }
 
+    function handleIrDetalle(valor){       
+        const vista = () =>{
+          if (valor<0) {
+            alert("debe seleccionar una opcion")
+          } else {
+              navigate(`/Detalle/${valor.i}`) 
+            }
+          }
+        vista();
+    }
 
     return ( 
     <>               
@@ -47,14 +58,13 @@ function Home() {
                         <p>Precio ${price}</p>
                     </div>
                     <div className="pie-pizza">
-                            <Detalle/>
+                            <button className='add-carrito-btn' onClick={() => handleIrDetalle({i})}>Ir al detalle</button>
                             <button className='add-carrito-btn' onClick={() => handleAddCarritoOnClick({id})}>Añadir</button>
                     </div>
                 </div> 
             ))}                     
         </div> 
     </>
-
     )
 }
 export default Home;

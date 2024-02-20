@@ -1,0 +1,87 @@
+.detallePizza{
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    width: 760px;
+}
+.detalleimagenpizza{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+.imagen-pizza{
+    border-radius: 12px;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+@supports(object-fit: cover){
+    .imagen-pizza{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+.nombre-pizza{
+    text-align: center;
+    margin: auto;
+}
+.detallepizzadescripcion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.detalle-nombre-pizza{
+    text-align: center;
+    margin: auto;
+}
+.detalle-descripcion-pizza{
+    text-align: center;
+    margin: auto;
+}
+.ingredientes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    justify-content: center;
+    text-align: center;
+}
+.detalle-precio-btn{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.detalle-pizza-btn{
+    width: 100px;
+    height: auto;
+    border-radius: 16px;
+    background-color: aqua;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+}
+.detalle-pizza-btn:hover{
+    border: 1px solid red;
+    background-color: aquamarine;
+    color: black;
+}
+
+
+.detalle-precio-pizza{
+    margin: auto;
+    text-align: center;
+}
+.pie-pizza{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    justify-content: space-between;
+    color: black;
+}
